@@ -58,3 +58,30 @@
     height: 75px;
     display: flex;
 }
+
+@media (max-width: 600px) {
+    .main-form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .amount,
+    .from-currency,
+    .to-currency,
+    .result {
+        width: 90% !important;
+        max-width: 320px !important;
+        height: 45px !important;
+        box-sizing: border-box !important;
+    }
+
+    .main-form svg {
+        transform: rotate(90deg) !important;
+        margin: 5px 0;
+        font-size: 20px;
+    }
+}
