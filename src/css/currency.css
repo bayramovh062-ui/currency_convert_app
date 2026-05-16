@@ -60,28 +60,85 @@
 }
 
 @media (max-width: 600px) {
+
+    /* Bütün səhifəni mobil ekrana tam sığdırırıq və kənara daşmaları bağlayırıq */
+    body,
+    #root {
+        width: 100vw !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Əsas xarici qutunun kənarlardan sıxılmasını və tam mərkəzdə durmasını təmin edirik */
+    .currency-div {
+        width: 90% !important;
+        max-width: 340px !important;
+        height: auto !important;
+        min-height: unset !important;
+        margin: 40px auto !important;
+        padding: 25px 15px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        float: none !important;
+    }
+
+    /* Daxili form elementlərini səliqəli şəkildə sütun halında düzürük */
+    .currency-form,
     .main-form {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
+        justify-content: center !important;
         width: 100% !important;
-        padding: 10px;
+        height: auto !important;
+        gap: 15px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
+    /* Bütün input, select və nəticə xanalarını qutunun içinə tam sığdırırıq */
     .amount,
     .from-currency,
     .to-currency,
     .result {
-        width: 90% !important;
-        max-width: 320px !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 280px !important;
         height: 45px !important;
+        margin: 0 auto !important;
         box-sizing: border-box !important;
     }
 
+    /* Ox işarəsini mərkəzləyirik */
     .main-form svg {
         transform: rotate(90deg) !important;
-        margin: 5px 0;
-        font-size: 20px;
+        font-size: 22px !important;
+        margin: 5px auto !important;
+        display: block !important;
+    }
+
+    /* Düyməni tam olaraq mərkəzə sığdırırıq */
+    .button-wraper-div {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 10px !important;
+    }
+
+    .currency-converter-button {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: 45px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
     }
 }
